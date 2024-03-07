@@ -1,0 +1,316 @@
+﻿
+@{
+    ViewBag.Title = "BookingTour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = Session["Account"] as Traveler.Models.Customer;
+    var formatMoney = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+
+
+
+}
+
+
+<style>
+    .top {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+    }
+
+        .top img {
+            border-radius: 10px 0px 0px 10px;
+        }
+
+    .detail-infor-item {
+        margin: 15px 0px
+    }
+
+    .contact-box {
+        background-color: #e7e7e7;
+        padding: 10px;
+        /*box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;*/
+        border-radius: 10px;
+    }
+
+    .passenger {
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .passenger-item {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border: 1px solid #dfdfdf;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px
+    }
+
+    .bill-detail {
+        border: 1px solid #dfdfdf;
+        padding: 10px
+    }
+</style>
+
+<div class="container">
+    <hr />
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+    </nav>
+    <hr />
+    <div class="top row">
+        <div class="col-lg-4" style="padding:0px">
+            <img src="~/Content/img/@ViewBag.Tour.Image1" style="width:100%" />
+        </div>
+        <div class="col-lg-8" style="padding: 15px">
+            <h4>@ViewBag.Tour.TourName</h4>
+            <div class="detail-infor-item"><span><i class="bi bi-cash"></i> Giá vé: <strong style="color: #ff5c5c">@String.Format(formatMoney, "{0:c0}", ViewBag.Tour.Price)</strong></span></div>
+            <div class="detail-infor-item"><span><i class="bi bi-calendar2-week"></i> Khởi hành: <strong>@ViewBag.Tour.DepartureDay</strong></span></div>
+            <div class="detail-infor-item"><span><i class="bi bi-airplane"></i> Dịch vụ bay: <strong>Bay cùng Vietnam Airlines</strong></span></div>
+            <div class="detail-infor-item"><span><i class="bi bi-building"></i> Khách sạn: <strong>@ViewBag.Tour.Hotel</strong></span></div>
+            <div class="detail-infor-item"><span><i class="bi bi-people"></i> Số chỗ còn nhận: <strong>@ViewBag.Tour.SlotNumber</strong></span></div>
+
+        </div>
+
+
+    </div>
+    <hr />
+
+    @using (Html.BeginForm("BookingTour", "Tours", FormMethod.Post))
+    {
+        @Html.ValidationSummary(true)
+        <div class="row main-container">
+            <div class="col-lg-7">
+                <h4 class="text-center">Tổng quan về chuyến đi</h4>
+
+                <div class="contact-box">
+                    <h6>Thông tin liên lạc</h6>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" name="ContactName" class="form-control" value="@user.Name.Trim()" placeholder="Họ và tên" required />
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="ContactPhoneNumber" class="form-control" value="@user.PhoneNumber.Trim()" placeholder="Số điện thoại" required />
+
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-lg-12">
+                            <textarea name="ContactAddress" class="form-control" placeholder="Địa chỉ"></textarea>
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr />
+
+                <div>
+                    <h5>Hành khách</h5>
+                    <h4 class="text-danger">@ViewBag.ThongBao</h4>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="passenger">
+                                <div><h6>Người lớn</h6></div>
+                                <div class="d-flex align-items-center">
+                                    @if (ViewBag.LstAdultCus.Count <= 1)
+                                    {
+                                        <button type="button" disabled class="btn">-</button>
+
+                                    }
+                                    else
+                                    {
+                                        <button type="button" onclick="location.href='@Url.Action("MinuteAdultCus", "Tours", new { idTour = ViewBag.Tour.ID })'" class="btn">-</button>
+
+                                    }
+
+                                    <span style="margin:0px 5px">@ViewBag.LstAdultCus.Count</span>
+                                    <button type="button" onclick="location.href='@Url.Action("AddAdultCus", "Tours", new { idTour = ViewBag.Tour.ID })'" class="btn">+</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="passenger">
+                                <div><h6>Trẻ em</h6></div>
+                                <div class="d-flex align-items-center">
+                                    @if (ViewBag.LstChildCus.Count <= 0)
+                                    {
+                                        <button type="button" disabled class="btn">-</button>
+
+                                    }
+                                    else
+                                    {
+                                        <button type="button" onclick="location.href='@Url.Action("MinuteChildCus", "Tours", new { idTour = ViewBag.Tour.ID })'" class="btn">-</button>
+
+                                    }
+
+                                    <span style="margin:0px 5px">@ViewBag.LstChildCus.Count</span>
+                                    <button type="button" onclick="location.href='@Url.Action("AddChildCus", "Tours", new { idTour = ViewBag.Tour.ID })'" class="btn">+</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <hr />
+                <div>
+
+                    <h5>Thông tin hành khách</h5>
+
+                    @if (ViewBag.LstAdultCus.Count > 0)
+                    {
+                        <div class="passenger-item">
+                            <h6>Người lớn</h6>
+
+                            @foreach (var item in ViewBag.LstAdultCus)
+                            {
+
+                                <div class="row d-flex align-items-end">
+                                    <div class="col-lg-8">
+                                        <small>Mã vé</small>
+                                        <input required type="text" disabled value="@item.CodeTicket" class="form-control" />
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <small>Loại vé</small>
+                                        <input required type="text" disabled value="Người lớn" class="form-control" />
+
+                                    </div>
+
+                                </div>
+
+                                <hr />
+                            }
+                        </div>
+                    }
+
+
+
+                    @if (ViewBag.LstChildCus.Count > 0)
+                    {
+                        <div class="passenger-item">
+                            <h6>Trẻ em</h6>
+                            @foreach (var item in ViewBag.LstChildCus)
+                            {
+                                <div class="row d-flex align-items-end">
+                                    <div class="col-lg-8">
+                                        <small>Mã vé</small>
+                                        <input required type="text" disabled value="@item.CodeTicket" class="form-control" />
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <small>Loại vé</small>
+                                        <input required type="text" disabled value="Trẻ em" class="form-control" />
+                                    </div>
+
+                                </div>
+                                <hr />
+                            }
+                        </div>
+                    }
+
+
+
+
+                </div>
+                <hr />
+                <div class="row" style="margin-top:10px">
+                    <h5>Ghi chú thêm</h5>
+                    <div class="col-lg-12">
+                        <textarea name="Note" class="form-control" placeholder="Quý khách có vấn đề gì, hãy nói với chúng tôi"></textarea>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-5 ">
+                <div class="bill-detail">
+
+                    <h5 class="text-center">Chi tiết hóa đơn</h5>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <h6>Hành khách: </h6>
+                        <div>
+                            <div style="font-size: 20px">
+                                <i class="bi bi-people-fill"></i>
+                                <span>@ViewBag.FinalSlot </span>
+                                @*<input type="hidden" value="@ViewBag.FinalSlot" name="FinalSlot" />*@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <h6>Người lớn </h6>
+                        <div>
+                            <div style="font-size: 20px">
+                                <span>@ViewBag.LstAdultCus.Count x @String.Format(formatMoney, "{0:c0}", ViewBag.Tour.Price)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6>Trẻ em </h6>
+                        <div>
+                            <div style="font-size: 20px">
+                                @if (@ViewBag.LstChildCus.Count > 0)
+                                {
+                                    <span>@ViewBag.LstChildCus.Count x @String.Format(formatMoney, "{0:c0}", ViewBag.ChildTicketPrice)</span>
+
+                                }
+                                else
+                                {
+                                    <span>0đ</span>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <h6>Khuyến mãi </h6>
+                        <div>
+                            <div style="font-size: 20px">
+                                <span>0đ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <h6>Mã giảm giá</h6>
+                        <div class="d-flex justify-content-end">
+                            <input type="text" style="width:50%" class="form-control" />
+                            <button class="btn btn-success">Áp dụng</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <h5>Tổng cộng </h5>
+                        <div>
+                            <div style="font-size: 25px; color: #ff5c5c">
+                                <span>@String.Format(formatMoney, "{0:c0}", ViewBag.FinalPrice)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="IdTour" value="@ViewBag.Tour.ID" />
+                    <input type="hidden" name="IdUser" value="@user.ID" />
+                    <button class="btn" style="width: 100%; color: white; background-color: #fd5056; font-size: 20px">Đặt ngay</button>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    }
+
+    </div>
+

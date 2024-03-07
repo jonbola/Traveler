@@ -1,0 +1,139 @@
+﻿@model Traveler.Models.Tour
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/ViewPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tour</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TourName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TourName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SlotNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SlotNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hotel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hotel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViewNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViewNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GatherPlace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GatherPlace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TourDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TourDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartureLocation.DepartureName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartureLocation.DepartureName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination.DestinationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination.DestinationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TourGuide.TourGuideName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TourGuide.TourGuideName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

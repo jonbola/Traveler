@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Traveler.Models.Tour>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/ViewPage1.cshtml";
+}
+
+<h2>Quản lý Tour</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tiêu đề Tour
+        </th>
+        <th>
+            Lượng khách
+        </th>
+        <th>
+            Từ ngày
+        </th>
+        <th>
+            Đến ngày
+        </th>
+        <th>
+            Giá
+        </th>
+        
+       
+       
+        <th>
+            Điểm đi
+        </th>
+        <th>
+            Điểm đến
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TourName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SlotNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+      
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartureLocation.DepartureName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destination.DestinationName)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.ID }) |
+           
+            @Html.ActionLink("Xóa", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

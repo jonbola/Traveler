@@ -1,0 +1,197 @@
+﻿@model Traveler.Models.Tour
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/ViewPage1.cshtml";
+}
+<style>
+    .checkbox-img {
+        display: flex;
+    }
+</style>
+
+<h2>Chỉnh sửa</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+
+        <div class="form-group">
+            <div class="col-lg-2"></div>
+
+            <div class="col-md-10">
+                <div class="checkbox-img">
+                    <div class="box-img-admin">
+                        <img id="blah" src="~/Content/img/@Model.Image1" alt="" width="80px" height="80px" /><br>
+                        <input accept="image/*" type='file' id="imgInp" name="Image1" />
+                        <label for="imgInp"><i class="bi bi-upload">Hình 1</i></label>
+                    </div>
+                    <div class="box-img-admin">
+                        <img id="bleh" src="~/Content/img/@Model.Image2" alt="" width="80px" height="80px" /><br>
+                        <input accept="image/*" type='file' id="imgImp" name="Image2" />
+                        <label for="imgImp"><i class="bi bi-upload">Hình 2</i></label>
+
+                    </div>
+                    <div class="box-img-admin">
+                        <img id="bldh" src="~/Content/img/@Model.Image3" alt="" width="80px" height="80px" /><br>
+                        <input accept="image/*" type='file' id="imgIop" name="Image3" />
+                        <label for="imgIop"><i class="bi bi-upload">Hình 3</i></label>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Tiêu đề Tour</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TourName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TourName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Điểm đi</label>
+
+            <div class="col-md-10">
+                @Html.DropDownList("DepartureLocationID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DepartureLocationID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+
+
+            <label class="control-label col-md-2">Điểm đến</label>
+
+            <div class="col-md-10">
+                @Html.DropDownList("DestinationID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.DestinationID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Số lượng khách</label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SlotNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SlotNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Ngày khởi hành</label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DepartureDay, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DepartureDay, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Đến ngày</label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EndDay, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EndDay, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Giá</label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Khách sạn</label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Hotel, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Hotel, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.ViewNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ViewNumber, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ViewNumber, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+        <input type="hidden" value="@Model.ViewNumber" disabled name="ViewNumber" class="form-control" />
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Địa điểm tập trung</label>
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.GatherPlace, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.GatherPlace, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Hướng dẫn đoàn</label>
+
+            <div class="col-md-10">
+                @Html.DropDownList("TourGuideID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TourGuideID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Mô tả</label>
+
+            <div class="col-md-10">
+                <textarea class="form-control" name="TourDescription">@Model.TourDescription</textarea>
+                @Html.ValidationMessageFor(model => model.TourDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+
+        <div class="container">
+            <h4>Lịch trình : </h4>
+            <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Create", "SchedulesManage",new {idTour = Model.ID })'">Thêm lịch trình</button>
+
+            @foreach (var item in ViewBag.Schedule)
+            {
+                <div class="form-group">
+                    <label class="control-label col-md-2">@item.ScheduleName</label>
+
+                    <div class="col-md-10">
+                        <p>@item.ScheduleDetail</p>
+                        <button type="button" class="btn btn-info" onclick="location.href='@Url.Action("Edit", "SchedulesManage",new {id = item.ID })'"> Chỉnh sửa</button>
+                        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "SchedulesManage",new {id = item.ID })'">Xóa</button>
+
+                    </div>
+
+                </div>
+                <hr />
+            }
+
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Quay lại danh sách", "Index")
+</div>

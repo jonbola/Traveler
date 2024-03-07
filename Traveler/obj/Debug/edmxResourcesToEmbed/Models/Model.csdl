@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TravelBookingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdminAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TourID" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="BookingDay" Type="DateTime" Precision="0" />
+    <Property Name="BookingCode" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SlotNumber" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ContactPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Book_Customer" FromRole="Book" ToRole="Customer" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_Book_Tour" FromRole="Book" ToRole="Tour" />
+    <NavigationProperty Name="TravelerInformations" Relationship="Self.FK_TravelerInformation_Book" FromRole="Book" ToRole="TravelerInformation" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AvatarImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Books" Relationship="Self.FK_Book_Customer" FromRole="Customer" ToRole="Book" />
+    <NavigationProperty Name="Ratings" Relationship="Self.FK_Rating_Customer" FromRole="Customer" ToRole="Rating" />
+  </EntityType>
+  <EntityType Name="DepartureLocation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartureName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_DepartureLocation" FromRole="DepartureLocation" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Destination">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DestinationName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_Destination" FromRole="Destination" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Rating">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="TourID" Type="Int32" />
+    <Property Name="StarNumber" Type="Int32" />
+    <Property Name="RatingContent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Rating_Customer" FromRole="Rating" ToRole="Customer" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_Rating_Tour" FromRole="Rating" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TourID" Type="Int32" />
+    <Property Name="ScheduleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ScheduleDetail" Type="String" MaxLength="900" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tour" Relationship="Self.FK_Schedule_Tour" FromRole="Schedule" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="Tour">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TourName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationID" Type="Int32" />
+    <Property Name="SlotNumber" Type="Int32" />
+    <Property Name="DepartureDay" Type="DateTime" Precision="0" />
+    <Property Name="EndDay" Type="DateTime" Precision="0" />
+    <Property Name="DepartureLocationID" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Hotel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ViewNumber" Type="Int32" />
+    <Property Name="GatherPlace" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TourGuideID" Type="Int32" />
+    <Property Name="Image1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Image3" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TourDescription" Type="String" MaxLength="900" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Books" Relationship="Self.FK_Book_Tour" FromRole="Tour" ToRole="Book" />
+    <NavigationProperty Name="DepartureLocation" Relationship="Self.FK_Tour_DepartureLocation" FromRole="Tour" ToRole="DepartureLocation" />
+    <NavigationProperty Name="Destination" Relationship="Self.FK_Tour_Destination" FromRole="Tour" ToRole="Destination" />
+    <NavigationProperty Name="Ratings" Relationship="Self.FK_Rating_Tour" FromRole="Tour" ToRole="Rating" />
+    <NavigationProperty Name="Schedules" Relationship="Self.FK_Schedule_Tour" FromRole="Tour" ToRole="Schedule" />
+    <NavigationProperty Name="TourGuide" Relationship="Self.FK_Tour_TourGuide" FromRole="Tour" ToRole="TourGuide" />
+  </EntityType>
+  <EntityType Name="TourGuide">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TourGuideName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TourGuidePhoneNumber" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="TourGuideEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AvatarImage" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Tours" Relationship="Self.FK_Tour_TourGuide" FromRole="TourGuide" ToRole="Tour" />
+  </EntityType>
+  <EntityType Name="TravelerInformation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDBooking" Type="Int32" />
+    <Property Name="CodeTicket" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerAge" Type="Byte" />
+    <NavigationProperty Name="Book" Relationship="Self.FK_TravelerInformation_Book" FromRole="TravelerInformation" ToRole="Book" />
+  </EntityType>
+  <Association Name="FK_Book_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Book">
+        <PropertyRef Name="TourID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TravelerInformation_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="TravelerInformation" Type="Self.TravelerInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TravelerInformation">
+        <PropertyRef Name="IDBooking" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rating_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Rating" Type="Self.Rating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rating">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_DepartureLocation">
+    <End Role="DepartureLocation" Type="Self.DepartureLocation" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartureLocation">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="DepartureLocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_Destination">
+    <End Role="Destination" Type="Self.Destination" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Destination">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="DestinationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rating_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Rating" Type="Self.Rating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Rating">
+        <PropertyRef Name="TourID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Schedule_Tour">
+    <End Role="Tour" Type="Self.Tour" Multiplicity="0..1" />
+    <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tour">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="TourID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tour_TourGuide">
+    <End Role="TourGuide" Type="Self.TourGuide" Multiplicity="0..1" />
+    <End Role="Tour" Type="Self.Tour" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TourGuide">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tour">
+        <PropertyRef Name="TourGuideID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TravelBookingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminAccounts" EntityType="Self.AdminAccount" />
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="DepartureLocations" EntityType="Self.DepartureLocation" />
+    <EntitySet Name="Destinations" EntityType="Self.Destination" />
+    <EntitySet Name="Ratings" EntityType="Self.Rating" />
+    <EntitySet Name="Schedules" EntityType="Self.Schedule" />
+    <EntitySet Name="Tours" EntityType="Self.Tour" />
+    <EntitySet Name="TourGuides" EntityType="Self.TourGuide" />
+    <EntitySet Name="TravelerInformations" EntityType="Self.TravelerInformation" />
+    <AssociationSet Name="FK_Book_Customer" Association="Self.FK_Book_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_Tour" Association="Self.FK_Book_Tour">
+      <End Role="Tour" EntitySet="Tours" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TravelerInformation_Book" Association="Self.FK_TravelerInformation_Book">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="TravelerInformation" EntitySet="TravelerInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rating_Customer" Association="Self.FK_Rating_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Rating" EntitySet="Ratings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_DepartureLocation" Association="Self.FK_Tour_DepartureLocation">
+      <End Role="DepartureLocation" EntitySet="DepartureLocations" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_Destination" Association="Self.FK_Tour_Destination">
+      <End Role="Destination" EntitySet="Destinations" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rating_Tour" Association="Self.FK_Rating_Tour">
+      <End Role="Tour" EntitySet="Tours" />
+      <End Role="Rating" EntitySet="Ratings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Schedule_Tour" Association="Self.FK_Schedule_Tour">
+      <End Role="Tour" EntitySet="Tours" />
+      <End Role="Schedule" EntitySet="Schedules" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tour_TourGuide" Association="Self.FK_Tour_TourGuide">
+      <End Role="TourGuide" EntitySet="TourGuides" />
+      <End Role="Tour" EntitySet="Tours" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

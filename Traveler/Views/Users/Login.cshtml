@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .login-box {
+        padding: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-top: 100px;
+        width: 600px
+    }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="login-box">
+        <h3 class="text-center">Đăng nhập tài khoản</h3>
+        @using (Html.BeginForm("Login", "Users"))
+        {
+            <input type="text" name="Email" class="form-control" placeholder="Email" /> <br />
+            <input type="password" name="Password" class="form-control" placeholder="Mật khẩu" /> <br />
+            <button class="btn  btn-primary mt-1" style="width: 100%">Đăng nhập</button> <br /> <br />
+            <small class="text-danger">@ViewBag.ThongBao</small> 
+
+            <div class="d-flex justify-content-center">Bạn chưa có tài khoản? <a href="@Url.Action("Register", "Users")">Đăng ký ngay</a></div>
+
+
+        }
+
+    </div>
+</div>
+

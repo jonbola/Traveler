@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="437f92a4c02d4e1f992b659cfc6ec412" Name="Diagram1">
+        <EntityTypeShape EntityType="TravelBookingModel.AdminAccount" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.Book" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.Customer" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.DepartureLocation" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.Destination" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.Rating" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.Schedule" Width="1.5" PointX="4.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.Tour" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.TourGuide" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TravelBookingModel.TravelerInformation" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="TravelBookingModel.FK_Book_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Book_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_TravelerInformation_Book" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Rating_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Tour_DepartureLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Tour_Destination" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Rating_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Schedule_Tour" ManuallyRouted="false" />
+        <AssociationConnector Association="TravelBookingModel.FK_Tour_TourGuide" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

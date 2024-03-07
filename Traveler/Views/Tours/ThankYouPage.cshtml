@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "ThankYouPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+.body-thankyou-page {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-thankyou-page {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: green;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            
+            color: #fff;
+            border-radius: 5px;
+        }
+    </style>
+
+<div class="body-thankyou-page">
+    <div class="container-thankyou-page">
+        <h1>Cảm ơn bạn đã đặt vé du lịch!</h1>
+        <p>Chúng tôi đã nhận được thông tin đặt vé của bạn.</p>
+        <p>Chúng tôi sẽ sớm liên hệ với bạn để hoàn tất nghiệp vụ thanh toán.</p>
+        <a href="@Url.Action("Index","Home")" class="btn d-block btn-success">Trang chủ</a>
+    </div>
+</div>
+
+

@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .login-box {
+        padding: 15px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        margin-top: 100px;
+        width: 600px
+    }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="login-box">
+        <h3 class="text-center">Đăng ký tài khoản</h3>
+        @using (Html.BeginForm("Register", "Users", FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+            <input type="text" name="userName" class="form-control" placeholder="Tên của bạn" /> <br />
+            <input type="text" name="PhoneNumber" class="form-control" placeholder="Số điện thoại" /> <br />
+
+            <input type="text" name="Email" class="form-control" placeholder="Email" /> <br />
+            <input type="password" name="Password" class="form-control" placeholder="Mật khẩu" /> <br />
+            <input type="password" name="RePassword" class="form-control" placeholder="Nhập lại mật khẩu" /> <br />
+
+            <button type="submit" class="btn btn-primary mt-1" style="width: 100%">Đăng nhập</button> <br /> <br />
+            <small style="color:darkred">@ViewBag.Notification</small>
+
+            <div class="d-flex justify-content-center">Bạn đã có tài khoản? <a href="@Url.Action("Login", "Users")">Đăng nhập</a></div>
+
+
+        }
+
+    </div>
+</div>
+

@@ -1,0 +1,166 @@
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Traveler.dll.config
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Traveler.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Traveler.pdb
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\csc.exe
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\csc.exe.config
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\csc.rsp
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\csi.exe
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\csi.exe.config
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\csi.rsp
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.AppContext.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Console.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.IO.Compression.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Net.Http.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.ValueTuple.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\vbc.exe
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\vbc.exe.config
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\vbc.rsp
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\VBCSCompiler.exe
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Antlr3.Runtime.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Optimization.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\WebGrease.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Optimization.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Antlr3.Runtime.pdb
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\obj\Debug\Traveler.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\obj\Debug\Traveler.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\obj\Debug\Traveler.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\obj\Debug\Traveler.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\obj\Debug\Traveler.pdb
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\Đồ án làm thuê\Dũng\Traveler\Traveler\bin\EntityFramework.SqlServer.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Traveler.dll.config
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Traveler.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Traveler.pdb
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\csc.exe
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\csc.exe.config
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\csc.rsp
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\csi.exe
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\csi.exe.config
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\csi.rsp
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.AppContext.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Collections.Immutable.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Console.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Globalization.Calendars.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.IO.Compression.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.IO.FileSystem.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Net.Http.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Net.Sockets.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Reflection.Metadata.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.ValueTuple.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Xml.XPath.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\vbc.exe
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\vbc.exe.config
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\vbc.rsp
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\VBCSCompiler.exe
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\roslyn\VBCSCompiler.exe.config
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Antlr3.Runtime.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\EntityFramework.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\EntityFramework.SqlServer.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Microsoft.Web.Infrastructure.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Newtonsoft.Json.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Helpers.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Mvc.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Optimization.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Razor.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.WebPages.Deployment.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.WebPages.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.WebPages.Razor.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\WebGrease.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\EntityFramework.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\EntityFramework.SqlServer.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Helpers.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Mvc.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Optimization.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.Razor.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.WebPages.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.WebPages.Deployment.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\System.Web.WebPages.Razor.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Newtonsoft.Json.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Antlr3.Runtime.pdb
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\obj\Debug\Traveler.csproj.AssemblyReference.cache
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\obj\Debug\Traveler.csproj.CoreCompileInputs.cache
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\obj\Debug\Traveler.csproj.CopyComplete
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\obj\Debug\Traveler.dll
+D:\Works\Document\Visual Studio 2022\Traveler\Traveler\obj\Debug\Traveler.pdb

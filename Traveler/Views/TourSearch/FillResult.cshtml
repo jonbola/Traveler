@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "FillResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var formatMoney = System.Globalization.CultureInfo.GetCultureInfo("vi-VN");
+
+}
+
+<!-- Packages Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">TOUR</h6>
+            <h1>KHÁM PHÁ TOUR DU LỊCH CỦA TRAVELER</h1>
+        </div>
+
+        <h4>Kết quả tìm kiếm</h4>
+        <div class="row">
+
+            @foreach (var item in ViewBag.ToursList)
+            {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src="~/Content/img/@item.Image1" alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>@item.Destination.DestinationName</small>
+                                @{
+                                    TimeSpan daysNumber = item.EndDay - item.DepartureDay;
+                                    int day = daysNumber.Days;
+
+                                    if (day > 0)
+                                    {
+                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>@day ngày</small>
+                                    }
+                                    else
+                                    {
+                                        <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>Đã hết hạn</small>
+                                    }
+                                }
+
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>Còn lại: @item.SlotNumber chỗ</small>
+                            </div>
+                            @{
+
+                                int maxLength = 50;
+
+                                if (item.TourName.Length > maxLength)
+                                {
+
+                                    string truncatedTourName = item.TourName.Substring(0, maxLength) + "...";
+
+                                    <a class="h5 text-decoration-none" href="@Url.Action("Detail/"+item.ID,"Tours")">@truncatedTourName</a>
+                                }
+                                else
+                                {
+                                    <a class="h5 text-decoration-none" href="@Url.Action("Detail/"+item.ID,"Tours")">@item.TourName</a>
+                                }
+                            }
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
+                                    <h5 class="m-0">@String.Format(formatMoney, "{0:c0}", item.Price)</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+<!-- Packages End -->
