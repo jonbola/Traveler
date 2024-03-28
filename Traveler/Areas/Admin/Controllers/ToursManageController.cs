@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using Traveler.FileExporter;
+using Traveler.FileExporter.OptionExporter;
 using Traveler.Models;
 
 namespace Traveler.Areas.Admin.Controllers
@@ -14,6 +18,7 @@ namespace Traveler.Areas.Admin.Controllers
     public class ToursManageController : Controller
     {
         private TravelBookingEntities db = new TravelBookingEntities();
+        private TourData tourData;
 
         // GET: Admin/ToursManage
         public ActionResult Index()
@@ -82,18 +87,20 @@ namespace Traveler.Areas.Admin.Controllers
                         Image3.SaveAs(path);
 
                     }
-
                     db.Tours.Add(tour);
-
                     db.SaveChanges();
+
+                    tourData = new TourData();
+                    tourData.SetOption(new CreateOption());
+                    tourData.ExportData(InputData(tour));
                 }
-                
                 return RedirectToAction("Index");
             }
 
             ViewBag.DepartureLocationID = new SelectList(db.DepartureLocations, "ID", "DepartureName", tour.DepartureLocationID);
             ViewBag.DestinationID = new SelectList(db.Destinations, "ID", "DestinationName", tour.DestinationID);
             ViewBag.TourGuideID = new SelectList(db.TourGuides, "ID", "TourGuideName", tour.TourGuideID);
+
             return View(tour);
         }
 
@@ -104,7 +111,9 @@ namespace Traveler.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Tour tour = db.Tours.Find(id);
+
             if (tour == null)
             {
                 return HttpNotFound();
@@ -125,11 +134,16 @@ namespace Traveler.Areas.Admin.Controllers
         public ActionResult Edit([Bind(Include = "ID,TourName,DestinationID,SlotNumber,DepartureDay,EndDay,DepartureLocationID,Price,Hotel,ViewNumber,GatherPlace,TourGuideID,Image1,Image2,Image3,TourDescription")] Tour tour)
         {
             if (ModelState.IsValid)
-            {
+            { 
                 db.Entry(tour).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+
+            tourData = new TourData();
+            tourData.SetOption(new EditOption());
+            tourData.ExportData(InputData(tour));
+
             ViewBag.DepartureLocationID = new SelectList(db.DepartureLocations, "ID", "DepartureName", tour.DepartureLocationID);
             ViewBag.DestinationID = new SelectList(db.Destinations, "ID", "DestinationName", tour.DestinationID);
             ViewBag.TourGuideID = new SelectList(db.TourGuides, "ID", "TourGuideName", tour.TourGuideID);
@@ -159,6 +173,11 @@ namespace Traveler.Areas.Admin.Controllers
             Tour tour = db.Tours.Find(id);
             db.Tours.Remove(tour);
             db.SaveChanges();
+
+            tourData = new TourData();
+            tourData.SetOption(new DeleteOption());
+            tourData.ExportData(InputData(tour));
+
             return RedirectToAction("Index");
         }
 
@@ -169,6 +188,28 @@ namespace Traveler.Areas.Admin.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public TourData InputData(Tour tour)
+        {
+            int id;
+            string tourName, desBegin, desEnd, maxCus, dateBegin, dateEnd, price, hotel, meeting, tourGuide, description;
+
+            id = tour.ID;
+            tourName = tour.TourName.ToString();
+            desBegin = (from des in db.DepartureLocations where des.ID == tour.DepartureLocationID select des.DepartureName).SingleOrDefault();
+            desEnd = (from des in db.Destinations where des.ID == tour.DestinationID select des.DestinationName).SingleOrDefault();
+            maxCus = tour.SlotNumber.ToString();
+            dateBegin = tour.DepartureDay?.ToString("dd/MM/yyyy");
+            dateEnd = tour.EndDay?.ToString("dd/MM/yyyy");
+            price = tour.Price.ToString();
+            hotel = tour.Hotel.ToString();
+            meeting = tour.GatherPlace.ToString();
+            tourGuide = (from tg in db.TourGuides where tg.ID == tour.TourGuideID select tg.TourGuideName).SingleOrDefault();
+            description = tour.TourDescription.ToString();
+
+            tourData = new TourData(id, tourName, desBegin, desEnd, maxCus, dateBegin, dateEnd, price, hotel, meeting, tourGuide, description);
+            return tourData;
         }
     }
 }
