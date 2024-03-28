@@ -6,10 +6,11 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace Traveler.FileExporter.OptionExporter
 {
-    public class EditOption : DataCollector
+    public class EditOption : TourData, DataCollector
     {
 
         int row;
+        bool state;
         Excel.Application dataApp;
         Excel.Workbook dataWorkbook;
         Excel.Worksheet dataWorkSheet;
@@ -25,21 +26,39 @@ namespace Traveler.FileExporter.OptionExporter
 
             for (int i = 1; i <= (GetDataSize() + 1); i++)
             {
-                if (excelRange.Cells[1][row].Value == null)
+                if (excelRange.Cells[1][row].Value == null || excelRange.Cells[15][row] == null)
                 {
-                    excelRange.Cells[1][row] = i;
-                    excelRange.Cells[2][row] = tourData.GetId().ToString();
-                    excelRange.Cells[3][row] = tourData.GetTourName();
-                    excelRange.Cells[4][row] = tourData.GetDestinationBegin();
-                    excelRange.Cells[5][row] = tourData.GetDestinationEnd();
-                    excelRange.Cells[6][row] = tourData.GetMaxCutomer();
-                    excelRange.Cells[7][row] = tourData.GetDateBegin();
-                    excelRange.Cells[8][row] = tourData.GetDateEnd();
-                    excelRange.Cells[9][row] = tourData.GetPrice();
-                    excelRange.Cells[10][row] = tourData.GetHotel();
-                    excelRange.Cells[11][row] = tourData.GetMeetingLocation();
-                    excelRange.Cells[12][row] = tourData.GetTourGuide();
-                    excelRange.Cells[13][row] = tourData.GetDescription();
+                    if (!state)
+                    {
+                        excelRange.Cells[1][row] = i;
+                        excelRange.Cells[2][row] = tourData.GetId().ToString();
+                        excelRange.Cells[3][row] = tourData.GetTourName();
+                        excelRange.Cells[4][row] = tourData.GetDestinationBegin();
+                        excelRange.Cells[5][row] = tourData.GetDestinationEnd();
+                        excelRange.Cells[6][row] = tourData.GetMaxCutomer();
+                        excelRange.Cells[7][row] = tourData.GetDateBegin();
+                        excelRange.Cells[8][row] = tourData.GetDateEnd();
+                        excelRange.Cells[9][row] = tourData.GetPrice();
+                        excelRange.Cells[10][row] = tourData.GetHotel();
+                        excelRange.Cells[11][row] = tourData.GetMeetingLocation();
+                        excelRange.Cells[12][row] = tourData.GetTourGuide();
+                        excelRange.Cells[13][row] = tourData.GetDescription();
+                    }
+                    else
+                    {
+                        excelRange.Cells[15][row] = tourData.GetId().ToString();
+                        excelRange.Cells[16][row] = tourData.GetTourName();
+                        excelRange.Cells[17][row] = tourData.GetDestinationBegin();
+                        excelRange.Cells[18][row] = tourData.GetDestinationEnd();
+                        excelRange.Cells[19][row] = tourData.GetMaxCutomer();
+                        excelRange.Cells[20][row] = tourData.GetDateBegin();
+                        excelRange.Cells[21][row] = tourData.GetDateEnd();
+                        excelRange.Cells[22][row] = tourData.GetPrice();
+                        excelRange.Cells[23][row] = tourData.GetHotel();
+                        excelRange.Cells[24][row] = tourData.GetMeetingLocation();
+                        excelRange.Cells[25][row] = tourData.GetTourGuide();
+                        excelRange.Cells[26][row] = tourData.GetDescription();
+                    }
                 }
 
                 else
@@ -70,6 +89,11 @@ namespace Traveler.FileExporter.OptionExporter
             }
             while (true);
             return size;
+        }
+
+        public override void SetStatus(bool value)
+        {
+            base.SetStatus(value);
         }
     }
 }

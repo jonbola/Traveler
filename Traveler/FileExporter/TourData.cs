@@ -12,7 +12,7 @@ namespace Traveler.FileExporter
         private DataCollector collector;
         private int id;
         private string tourName, desBegin, desEnd, maxCus, dateBegin, dateEnd, price, hotel, meeting, tourGuide, description;
-        protected bool status;
+        protected bool state;
 
         public TourData() { }
 
@@ -154,7 +154,7 @@ namespace Traveler.FileExporter
 
         public virtual void SetStatus(bool value)
         {
-            status = value;
+            state = value;
         }
 
         public void SetOption(DataCollector option)
