@@ -9,6 +9,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
+using Traveler.Design_Pattern.Command_Pattern;
 using Traveler.FileExporter;
 using Traveler.FileExporter.OptionExporter;
 using Traveler.Models;
@@ -118,6 +119,9 @@ namespace Traveler.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
+            ITourCommand editCommand = new EditTourCommand(tour, db);
+
+            editCommand.Execute();
             ViewBag.DepartureLocationID = new SelectList(db.DepartureLocations, "ID", "DepartureName", tour.DepartureLocationID);
             ViewBag.DestinationID = new SelectList(db.Destinations, "ID", "DestinationName", tour.DestinationID);
             ViewBag.TourGuideID = new SelectList(db.TourGuides, "ID", "TourGuideName", tour.TourGuideID);

@@ -145,6 +145,12 @@
     <Compile Include="FileExporter\OptionExporter\DeleteOption.cs" />
     <Compile Include="FileExporter\OptionExporter\EditOption.cs" />
     <Compile Include="FileExporter\TourData.cs" />
+    <Compile Include="File\Command Pattern\EditTourCommand.cs" />
+    <Compile Include="File\Command Pattern\ITourCommand.cs" />
+    <Compile Include="File\Facade Pattern\ITravelFacade.cs" />
+    <Compile Include="File\Facade Pattern\TravelFacade.cs" />
+    <Compile Include="File\Factory Pattern\DefaultTourSearchFactory.cs" />
+    <Compile Include="File\Factory Pattern\ITourSearchFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
